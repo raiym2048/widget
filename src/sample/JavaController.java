@@ -1,10 +1,8 @@
 package sample;
 
-import java.net.URL;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
@@ -13,11 +11,6 @@ import javafx.scene.text.Text;
 
 public class JavaController {
 
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private Button LogInWeather;
@@ -38,7 +31,7 @@ public class JavaController {
     private RadioButton radio_btn_1;
 
     @FXML
-     ToggleGroup answer;
+    ToggleGroup answer;
 
     @FXML
     private RadioButton radio_btn_2;
@@ -55,7 +48,7 @@ public class JavaController {
     @FXML
     private Button answerBtn;
 
-    private Questions[] questions = new Questions[] {
+    private final Questions[] questions = new Questions[] {
             new Questions("В каком из вариантов представлен корректный формат вывода информации на экран?", new String[] {"Console.Write()", "console.log()", "print()", "System.out.println()"}),
             new Questions("Какой тип данных отвечает за целые числа?", new String[] {"String", "Float", "Boolean", "Integer"}),
             new Questions("Где правильно присвоено новое значение к многомерному массиву?", new String[] {"a(0)(0) = 1;", "a[0 0] = 1;", "a{0}{0} = 1;", "a[0][0] = 1;"}),
@@ -67,7 +60,7 @@ public class JavaController {
     private int nowQuestion = 0;
     private String nowCorrectAnswer;
     int correctAnswers = 0;
-    ToggleGroup answers = null;
+    ToggleGroup answers = new ToggleGroup();
     
 
     @FXML
@@ -82,7 +75,7 @@ public class JavaController {
             RadioButton selectedRadioButton = (RadioButton) answers.getSelectedToggle();
             // Код будет выполняться только если пользователь выбрал ответ
             if(selectedRadioButton != null) {
-                // Получаем текст ответа
+
                 String toogleGroupValue = selectedRadioButton.getText();
 
                 // Сверяем ответ с корректным

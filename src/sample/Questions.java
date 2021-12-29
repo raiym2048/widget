@@ -9,9 +9,6 @@ public class Questions {
         this.answers = answers;
     }
 
-    public String correctAnswers(){
-        return this.answers[answers.length - 1];
-    }
 
     public String getQuestion() {
         return question;

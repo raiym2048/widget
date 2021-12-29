@@ -124,7 +124,7 @@
          <Font size="18.0" />
       </font>
    </Text>
-   <Button fx:id="answerBtn" layoutX="320.0" layoutY="538.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="256.0" text="Button">
+   <Button fx:id="answerBtn" layoutX="320.0" layoutY="538.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="256.0" text="To answer">
       <font>
          <Font size="18.0" />
       </font>
