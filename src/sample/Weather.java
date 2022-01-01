@@ -6,34 +6,39 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ResourceBundle;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.json.JSONObject;
 
-public class HomeController {
+public class Weather {
+
+    @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+
     @FXML
     private Button LogInWeather;
+
+    @FXML
+    private Button LogInCovid;
+
+    @FXML
+    private Button LogInTest;
 
     @FXML
     private Button LogInCurrency;
 
     @FXML
     private Button LogInGame;
-
-    @FXML
-    private Button LogInTest;
-
-    @FXML
-    private Button LogInCovid;
-
-
 
     @FXML
     private TextField city;
@@ -47,7 +52,25 @@ public class HomeController {
     @FXML
     private Text temp_info;
 
+    @FXML
+    private Button LogOutProg;
 
+    @FXML
+    private ImageView image1;
+
+    @FXML
+    private ImageView image2;
+
+    @FXML
+    private ImageView image3;
+
+    @FXML
+    private ImageView image4;
+
+    @FXML
+    private ImageView image5;
+
+    @FXML
     public void initialize() {
         LogInWeather.setOnAction(event ->{
             try {
@@ -108,8 +131,7 @@ public class HomeController {
 
 
         });
-
-    }// currency
+    }
     private static String getUrlContent(String urlAdress) {
         StringBuffer content = new StringBuffer();
 
@@ -130,5 +152,4 @@ public class HomeController {
         }
         return content.toString();
     }
-
 }

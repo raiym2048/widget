@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Main extends Application {
 
@@ -21,6 +22,19 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
+
+        /*Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int count = 0;
+        int [] array = new int[n];
+        for(int i = 0;i < n;i++){
+            array[i] = -13 + (int)(Math.random() * ((57 - (-13)) + 1));
+            if(array[i] > n){
+                System.out.println(array[i]);
+                count++;
+            }
+        }
+        System.out.println(count);*/
         launch(args);
     }
 }

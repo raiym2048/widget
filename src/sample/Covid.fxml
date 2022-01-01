@@ -3,12 +3,13 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="750.0" style="-fx-background-color: #46857e;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CovidController">
+<AnchorPane prefHeight="700.0" prefWidth="750.0" style="-fx-background-color: #46857e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CovidController">
     <AnchorPane prefHeight="105.0" prefWidth="750.0" style="-fx-background-color: #FFEE99;">
         <children>
             <Text layoutX="404.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Covid-19">
@@ -89,4 +90,53 @@
             </font>
         </Button>
     </AnchorPane>
+    <Text layoutX="234.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cases:" wrappingWidth="59.3798828125">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <Text layoutX="388.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recovered:">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <Text fx:id="rec_info" layoutX="484.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="rec_info" wrappingWidth="87.24902663379908" />
+    <Text layoutX="572.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deaths:">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <Text fx:id="death_info" layoutX="648.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="death_info" wrappingWidth="87.2490294277668" />
+    <Text fx:id="cases_info" layoutX="293.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cases_info" wrappingWidth="97.6708984375" />
+    <Text layoutX="388.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Worls Statics" wrappingWidth="156.97266161441803">
+        <font>
+            <Font name="Arial Italic" size="26.0" />
+        </font>
+    </Text>
+    <TextField fx:id="country" layoutX="401.0" layoutY="252.0" />
+    <Text layoutX="318.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country">
+        <font>
+            <Font name="System Italic" size="20.0" />
+        </font>
+    </Text>
+    <Text layoutX="234.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cases:" wrappingWidth="59.3798828125">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <Text layoutX="388.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recovered:">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <Text layoutX="572.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deaths:">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <Button fx:id="search" layoutX="616.0" layoutY="252.0" mnemonicParsing="false" text="Search" />
+    <Text fx:id="cases_info_county" layoutX="293.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="97.6708984375" />
+    <Text fx:id="rec_info_country" layoutX="484.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="87.24902663379908" />
+    <Text fx:id="death_info_country" layoutX="637.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="87.2490294277668" />
+    <Button fx:id="refresh" layoutX="659.0" layoutY="640.0" mnemonicParsing="false" text="refresh" />
 </AnchorPane>
