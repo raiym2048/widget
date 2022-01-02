@@ -2,18 +2,17 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="750.0" style="-fx-background-color: #46857e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.JavaController">
+<AnchorPane prefHeight="700.0" prefWidth="750.0" style="-fx-background-color: #46857e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CovidController">
     <AnchorPane prefHeight="105.0" prefWidth="750.0" style="-fx-background-color: #FFEE99;">
         <children>
-            <Text layoutX="232.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Java question!!">
+            <Text layoutX="404.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Covid-19">
                 <font>
                     <Font name="Bauhaus 93" size="40.0" />
                 </font>
@@ -72,7 +71,7 @@
                     <Font size="18.0" />
                 </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="285.0" text="Game">
+            <Button fx:id="LogInGame" mnemonicParsing="false" prefHeight="47.0" prefWidth="285.0" text="Game">
                 <VBox.margin>
                     <Insets bottom="20.0" left="10.0" right="10.0" top="15.0" />
                 </VBox.margin>
@@ -85,48 +84,59 @@
             </Button>
             <Separator prefWidth="200.0" />
         </VBox>
-        <Button fx:id="GoBackButton" layoutX="15.0" layoutY="606.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" text="Go back">
+        <Button layoutX="15.0" layoutY="606.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" text="Go back">
             <font>
                 <Font size="18.0" />
             </font>
         </Button>
     </AnchorPane>
-    <RadioButton fx:id="radio_btn_1" layoutX="261.0" layoutY="296.0" mnemonicParsing="false" selected="true" text="Console.Write()">
-        <font>
-            <Font size="16.0" />
-        </font>
-        <toggleGroup>
-            <ToggleGroup fx:id="answer" />
-        </toggleGroup>
-    </RadioButton>
-    <RadioButton fx:id="radio_btn_2" layoutX="261.0" layoutY="346.0" mnemonicParsing="false" selected="true" text="&quot;console.log()&quot;" toggleGroup="$answer">
-        <font>
-            <Font size="16.0" />
-        </font>
-    </RadioButton>
-    <RadioButton fx:id="radio_btn_3" layoutX="261.0" layoutY="396.0" mnemonicParsing="false" selected="true" text="print()" toggleGroup="$answer">
-        <font>
-            <Font size="16.0" />
-        </font>
-    </RadioButton>
-    <RadioButton fx:id="radio_btn_4" layoutX="261.0" layoutY="446.0" mnemonicParsing="false" selected="true" text="System.out.println()" toggleGroup="$answer">
-        <font>
-            <Font size="16.0" />
-        </font>
-    </RadioButton>
-    <Text layoutX="267.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Java proficiency test" wrappingWidth="448.3184814453125">
-        <font>
-            <Font name="Calibri" size="44.0" />
-        </font>
-    </Text>
-    <Text fx:id="question_text" layoutX="261.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В каком из вариантов представлен корректный формат вывода информации на экран?" wrappingWidth="459.47003173828125">
+    <Text layoutX="234.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cases:" wrappingWidth="59.3798828125">
         <font>
             <Font size="18.0" />
         </font>
     </Text>
-    <Button fx:id="answerBtn" layoutX="320.0" layoutY="538.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="256.0" text="To answer">
+    <Text layoutX="388.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recovered:">
         <font>
             <Font size="18.0" />
         </font>
-    </Button>
+    </Text>
+    <Text fx:id="rec_info" layoutX="484.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="rec_info" wrappingWidth="87.24902663379908" />
+    <Text layoutX="572.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deaths:">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <Text fx:id="death_info" layoutX="648.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="death_info" wrappingWidth="87.2490294277668" />
+    <Text fx:id="cases_info" layoutX="293.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cases_info" wrappingWidth="97.6708984375" />
+    <Text layoutX="388.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Worls Statics" wrappingWidth="156.97266161441803">
+        <font>
+            <Font name="Arial Italic" size="26.0" />
+        </font>
+    </Text>
+    <TextField fx:id="country" layoutX="401.0" layoutY="252.0" />
+    <Text layoutX="318.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country">
+        <font>
+            <Font name="System Italic" size="20.0" />
+        </font>
+    </Text>
+    <Text layoutX="234.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cases:" wrappingWidth="59.3798828125">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <Text layoutX="388.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recovered:">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <Text layoutX="572.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deaths:">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <Button fx:id="search" layoutX="616.0" layoutY="252.0" mnemonicParsing="false" text="Search" />
+    <Text fx:id="cases_info_county" layoutX="293.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="97.6708984375" />
+    <Text fx:id="rec_info_country" layoutX="484.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="87.24902663379908" />
+    <Text fx:id="death_info_country" layoutX="637.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="87.2490294277668" />
+    <Button fx:id="refresh" layoutX="659.0" layoutY="640.0" mnemonicParsing="false" text="refresh" />
 </AnchorPane>
