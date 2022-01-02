@@ -26,7 +26,7 @@
          </font>
       </Text>
       <Separator layoutY="108.0" prefWidth="200.0" />
-      <VBox layoutY="108.0" prefHeight="420.0" prefWidth="200.0">
+      <VBox layoutY="118.0" prefHeight="420.0" prefWidth="200.0">
          <Button fx:id="LogInWeather" mnemonicParsing="false" prefHeight="47.0" prefWidth="203.0" text="Weather">
             <VBox.margin>
                <Insets bottom="20.0" left="10.0" right="10.0" top="15.0" />
@@ -91,22 +91,22 @@
       </Button>
    </AnchorPane>
    <ImageView fx:id="image1" fitHeight="150.0" fitWidth="425.0" layoutX="200.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../../image/weather-icons.jpg" />
+      <Image url="@image/weather-icons.jpg" />
    </ImageView>
    <ImageView fx:id="image2" fitHeight="267.0" fitWidth="267.0" layoutX="200.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../../image/Java.jpg" />
+      <Image url="@image/Java.jpg" />
    </ImageView>
    <ImageView fx:id="image3" fitHeight="188.0" fitWidth="267.0" layoutX="200.0" layoutY="522.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../../image/currency.jpg" />
+      <Image url="@image/currency.jpg" />
    </ImageView>
    <ImageView fx:id="image4" fitHeight="184.0" fitWidth="283.0" layoutX="467.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../image/anime-girl-cyberpunk-ride-4k-lx.jpg" />
+         <Image url="@image/anime-girl-cyberpunk-ride-4k-lx.jpg" />
       </image>
    </ImageView>
    <ImageView fx:id="image5" fitHeight="256.0" fitWidth="283.0" layoutX="467.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../image/images.jpg" />
+         <Image url="@image/images.jpg" />
       </image>
    </ImageView>
 </AnchorPane>
