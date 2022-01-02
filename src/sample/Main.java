@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Main extends Application {
+public class Main extends Application {//Anchor
 
     @Override
     public void start(Stage primaryStage) throws Exception{
